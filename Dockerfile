@@ -1,4 +1,4 @@
-FROM debian:wheezy
+FROM debian:jessie
 MAINTAINER Philip Southam <philip@eml.cc>
 ENV DEBIAN_FRONTEND noninteractive
 COPY debian-repo.pub /
