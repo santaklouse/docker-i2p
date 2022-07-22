@@ -3,7 +3,7 @@ name: Docker Image CI and publish to DockerHub
 on:
   push:
     branches:
-      - 'main'
+      - 'master'
 
 env:
   IMAGE_NAME: santaklouse/i2p
