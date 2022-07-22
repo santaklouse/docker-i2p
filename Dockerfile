@@ -3,6 +3,7 @@ MAINTAINER Philip Southam <philip@eml.cc>
 ENV DEBIAN_FRONTEND noninteractive
 COPY debian-repo.pub /
 RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys EEA14886 &&\
+  add-apt-repository ppa:nilarimogard/webupd8 &&\
   apt-key add /debian-repo.pub &&\
   echo "deb http://ppa.launchpad.net/webupd8team/java/ubuntu precise main" | tee /etc/apt/sources.list.d/webupd8team-java.list &&\
   echo "deb http://deb.i2p2.no/ stable main" | tee /etc/apt/sources.list.d/i2p.list &&\
