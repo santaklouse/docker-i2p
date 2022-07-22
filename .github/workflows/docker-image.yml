@@ -3,10 +3,10 @@ name: Docker Image CI and publish to DockerHub
 on:
   push:
     branches:
-      - 'master'
+      - 'main'
 
 env:
-  IMAGE_NAME: santaklouse/i2p
+  IMAGE_NAME: santaklouse/delegated
 
 jobs:
   build:
@@ -14,7 +14,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag ${{ env.IMAGE_NAME }}:$(date +%s)
+      run: docker build . --file Dockerfile --tag ${{ env.IMAGE_NAME }}:latest
   docker:
     runs-on: ubuntu-latest
     steps:
